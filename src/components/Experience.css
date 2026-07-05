@@ -1,0 +1,148 @@
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 56px;
+}
+
+.jobCard {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 28px 32px;
+}
+
+.jobHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.jobRole {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 19px;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+.jobMeta {
+  font-size: 13px;
+  color: var(--text2);
+}
+
+.jobPeriod {
+  font-size: 13px;
+  color: var(--accent);
+  white-space: nowrap;
+}
+
+.jobTag {
+  display: inline-block;
+  font-size: 12px;
+  color: var(--accent);
+  background: var(--accent-bg);
+  border: 1px solid var(--accent-dim);
+  padding: 5px 12px;
+  border-radius: 100px;
+  margin-bottom: 16px;
+}
+
+.jobBullets {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.jobBullets li {
+  font-size: 14px;
+  color: var(--text2);
+  line-height: 1.6;
+  padding-left: 18px;
+  position: relative;
+}
+
+.jobBullets li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--accent-dim);
+}
+
+.eduCredGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.credCard {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 24px;
+}
+
+.credTitle {
+  font-size: 12px;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 18px;
+}
+
+.eduDegree {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+.eduSchool {
+  font-size: 13px;
+  color: var(--text2);
+  margin-bottom: 12px;
+}
+
+.eduNote {
+  font-size: 13px;
+  color: var(--text2);
+  line-height: 1.5;
+}
+
+.certRow,
+.langRow {
+  display: flex;
+  flex-direction: column;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 13px;
+}
+
+.certRow:last-child,
+.langRow:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.certName,
+.langName {
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.certMeta,
+.langLevel {
+  color: var(--text2);
+  font-size: 12px;
+}
+
+@media (max-width: 900px) {
+  .eduCredGrid {
+    grid-template-columns: 1fr;
+  }
+  .jobCard {
+    padding: 22px 20px;
+  }
+}

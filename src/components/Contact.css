@@ -1,0 +1,83 @@
+.section.noBorder {
+  border-bottom: none;
+}
+
+.contactForm {
+  max-width: 560px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 40px;
+}
+
+.formRow {
+  display: flex;
+  gap: 14px;
+}
+
+.formInput,
+.formTextarea {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 14px 16px;
+  color: var(--text);
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  flex: 1;
+  width: 100%;
+  transition: border-color 0.15s ease;
+}
+
+.formInput:focus,
+.formTextarea:focus {
+  outline: none;
+  border-color: var(--accent-dim);
+}
+
+.formTextarea {
+  resize: vertical;
+}
+
+.formMsg {
+  font-size: 13px;
+  padding: 10px 14px;
+  border-radius: 4px;
+}
+
+.formMsg.success {
+  background: rgba(80, 200, 130, 0.1);
+  color: #6bd6a0;
+  border: 1px solid rgba(80, 200, 130, 0.3);
+}
+
+.formMsg.error {
+  background: rgba(220, 90, 90, 0.1);
+  color: #e08a8a;
+  border: 1px solid rgba(220, 90, 90, 0.3);
+}
+
+.contactLinks {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.contactLink {
+  font-size: 13px;
+  color: var(--text2);
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 2px;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.contactLink:hover {
+  color: var(--accent);
+  border-color: var(--accent-dim);
+}
+
+@media (max-width: 600px) {
+  .formRow {
+    flex-direction: column;
+  }
+}

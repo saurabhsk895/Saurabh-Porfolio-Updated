@@ -1,0 +1,43 @@
+.clientsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.clientCard {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 22px 24px;
+  transition: transform 0.15s ease, border-color 0.15s ease;
+}
+
+.clientCard:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent-dim);
+}
+
+.clientName {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+.clientNote {
+  font-size: 13px;
+  color: var(--text2);
+  line-height: 1.4;
+}
+
+@media (max-width: 900px) {
+  .clientsGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .clientsGrid {
+    grid-template-columns: 1fr;
+  }
+}
